@@ -8,8 +8,6 @@ import CartContextProvider from "./store/shopping-cart-context";
   
 
 function App() {
-
-
     return (
         <CartContextProvider>
             <Header />
