@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Shop from './components/Shop';
 import { DUMMY_PRODUCTS } from './dummy-products';
 
+
 function App() {
     const [shoppingCart, setShoppingCart] = useState({
         items: [],
@@ -49,6 +50,8 @@ function App() {
             const updatedItem = {
                 ...updatedItems[updatedItemIndex],
             };
+
+            updatedItem.quantity += amount;
 
             if (updatedItem.quantity <= 0) {
                 updatedItems.splice(updatedItemIndex, 1);

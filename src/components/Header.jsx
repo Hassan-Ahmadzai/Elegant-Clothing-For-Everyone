@@ -9,7 +9,7 @@ export default function Header({ cart, onUpdateCartItemQuantity }) {
 
   function handleOpenCartClick() {
     modal.current.open();
-  }
+  };
 
   let modalActions = <button>Close</button>;
 
@@ -20,7 +20,7 @@ export default function Header({ cart, onUpdateCartItemQuantity }) {
         <button>Checkout</button>
       </>
     );
-  }
+  };
 
   return (
     <>
