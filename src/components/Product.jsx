@@ -1,4 +1,7 @@
 import React from "react";
+import { useContext } from "react";
+import { CartContext } from "../store/shopping-cart-context";
+
 
 function Product({
     id,
@@ -8,6 +11,8 @@ function Product({
     description,
     onAddToCart,
 }) {
+    const { addItemToCart } = useContext(CartContext);    
+
     return (
         <article className="product">
             <img src={image} alt={title} />
