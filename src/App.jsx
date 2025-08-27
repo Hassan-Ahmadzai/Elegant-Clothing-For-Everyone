@@ -3,26 +3,21 @@ import Header from './components/Header';
 import Shop from './components/Shop';
 import { DUMMY_PRODUCTS } from './dummy-products';
 import Product from './components/Product';
-import { CartContext } from './store/shopping-cart-context';
+import CartContextProvider from './store/shopping-cart-context';
 
 
 function App() {
-    
-
     return (
-        <CartContext.Provider value={ctxValue}>
+        <CartContextProvider>
             <Header />
             <Shop>
                 {DUMMY_PRODUCTS.map((product) => (
                     <li key={product.id}>
-                        <Product
-                            {...product}
-                            onAddToCart={handleAddItemToCart}
-                        />
+                        <Product {...product} />
                     </li>
                 ))}
             </Shop>
-        </CartContext.Provider>
+        </CartContextProvider>
     );
 };
 

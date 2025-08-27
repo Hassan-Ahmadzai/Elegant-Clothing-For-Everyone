@@ -9,7 +9,6 @@ function Product({
     title,
     price,
     description,
-    onAddToCart,
 }) {
     const { addItemToCart } = useContext(CartContext);    
 
@@ -25,7 +24,7 @@ function Product({
                 </div>
 
                 <p className="product-actions">
-                    <button onClick={() => onAddToCart(id)}>
+                    <button onClick={() => addItemToCart(id)}>
                         Add to Cart
                     </button>
                 </p>
