@@ -1,16 +1,15 @@
-import React from "react";
+import Product from "./Product";
+import { DUMMY_PRODUCTS } from "../dummy-products";
 
 
-function Shop({ children }) {
-    return (
-        <section id="shop">
-            <h2>Elegant Clothing For Everyone</h2>
+export default function Shop({ children }) {
+  return (
+    <section id="shop">
+      <h2>Elegant Clothing For Everyone</h2>
 
-            <ul id="products">
-                {children}
-            </ul>
-        </section>
-    );
-};
-
-export default Shop;
+      <ul id="products">
+        {children}
+      </ul>
+    </section>
+  );
+}
