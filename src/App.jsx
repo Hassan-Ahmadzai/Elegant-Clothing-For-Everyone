@@ -35,7 +35,7 @@ function App() {
                     price: product.price,
                     quantity: 1,
                 });
-            }
+            };
 
             return {
                 items: updatedItems,
