@@ -8,13 +8,13 @@ const CartModal = forwardRef(function Modal(
 ) {
   const dialog = useRef();
 
-  // useImperativeHandle(ref, () => {
-  //   return {
-  //     open: () => {
-  //       dialog.current.showModal();
-  //     },
-  //   };
-  // });
+  useImperativeHandle(ref, () => {
+    return {
+      open: () => {
+        dialog.current.showModal();
+      },
+    };
+  });
 
   return createPortal(
     <dialog id="modal" ref={dialog}>
