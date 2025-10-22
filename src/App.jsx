@@ -1,10 +1,7 @@
-import { useState } from "react";
-
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Shop from "./components/Shop";
-import { DUMMY_PRODUCTS } from './dummy-products';
-import Product from "./components/Product";
-import { CartContext } from "./store/shopping-cart-context";
+import { DUMMY_PRODUCTS } from "./dummy-products";
 
 
 function App() {
@@ -39,59 +36,16 @@ function App() {
 
             return {
                 items: updatedItems,
-            };
+            };  
         });
     };
 
-function handleUpdateCartItemQuantity(productId, amount) {
-    setShoppingCart((prevShoppingCart) => {
-        const updatedItems = [...prevShoppingCart.items];
-        const updatedItemIndex = updatedItems.findIndex(
-            (item) => item.id === productId
-        );
-
-        const updatedItem = {
-            ...updatedItems[updatedItemIndex],
-        };
-
-        updatedItem.quantity += amount;
-
-        if (updatedItem.quantity <= 0) {
-            updatedItems.splice(updatedItemIndex, 1);
-        } else {
-            updatedItems[updatedItemIndex] = updatedItem;
-        }
-
-        return {
-            items: updatedItems,
-        };
-    });
+    return (
+        <>
+            <Header />
+            <Shop onAddItemToCart={handleAddItemToCart} />
+        </>
+    );
 };
-
-const ctxValue = {
-    items: shoppingCart.items,
-    addItemToCart: handleAddItemToCart,
-};
-
-return (
-    <CartContext.Provider value={ctxValue}>
-        <Header
-            cart={shoppingCart}
-            onUpdateCartItemQuantity={handleUpdateCartItemQuantity}
-        />
-        
-        <Shop>
-            {DUMMY_PRODUCTS.map((product) => (
-                <li key={product.id}>
-                    <Product 
-                        {...product} 
-                        onAddToCart={handleAddItemToCart} 
-                    />
-                </li>
-            ))}
-        </Shop>
-    </CartContext.Provider>
-    
-)};
 
 export default App;

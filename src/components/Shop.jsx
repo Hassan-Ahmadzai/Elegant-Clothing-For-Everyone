@@ -2,6 +2,7 @@ import Product from "./Product";
 import { DUMMY_PRODUCTS } from "../dummy-products";
 
 
+
 export default function Shop({ children }) {
   return (
     <section id="shop">
