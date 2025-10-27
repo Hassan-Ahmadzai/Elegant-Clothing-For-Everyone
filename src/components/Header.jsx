@@ -1,6 +1,8 @@
 import { useRef } from "react";
+import logoImg from '../assets/logo.png';
 
 import CartModal from "./CartModal";
+
 
 export default function Header({ cart, onUpdateCartItemQuantity }) {
   const modal = useRef();
@@ -9,7 +11,7 @@ export default function Header({ cart, onUpdateCartItemQuantity }) {
 
   function handleOpenCartClick() {
     modal.current.open();
-  }
+  };
 
   let modalActions = <button>Close</button>;
 
@@ -20,7 +22,7 @@ export default function Header({ cart, onUpdateCartItemQuantity }) {
         <button>Checkout</button>
       </>
     );
-  }
+  };
 
   return (
     <>
@@ -33,7 +35,7 @@ export default function Header({ cart, onUpdateCartItemQuantity }) {
       />
       <header id="main-header">
         <div id="main-title">
-          <img src="logo.png" alt="Elegant model" />
+          <img src={logoImg} alt="Elegant model" />
           <h1>Elegant Context</h1>
         </div>
         <p>
