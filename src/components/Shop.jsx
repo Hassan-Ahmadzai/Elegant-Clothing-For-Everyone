@@ -16,4 +16,4 @@ export default function Shop({ onAddItemToCart }) {
       </ul>
     </section>
   );
-}
+};
