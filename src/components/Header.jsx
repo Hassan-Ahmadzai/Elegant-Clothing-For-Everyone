@@ -13,7 +13,7 @@ export default function Header({ cart, onUpdateCartItemQuantity }) {
     modal.current.open();
   };
 
-  let modalActions = <button>Close</button>;
+  let modalActions = <button>Close</button>
 
   if (cartQuantity > 0) {
     modalActions = (
@@ -44,4 +44,4 @@ export default function Header({ cart, onUpdateCartItemQuantity }) {
       </header>
     </>
   );
-}
+};
