@@ -13,7 +13,7 @@ export default function Header() {
 
   function handleOpenCartClick() {
     modal.current.open();
-  };
+  };                            
 
   let modalActions = <button>Close</button>
 
