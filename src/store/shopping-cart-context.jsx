@@ -1,5 +1,6 @@
 
 import { createContext, useState } from "react";
+import { DUMMY_PRODUCTS } from "../dummy-products";
 
 
 export const CartContext = createContext({
@@ -75,6 +76,7 @@ export default function CartContextProvider({ children }) {
         addItemToCart: handleAddItemToCart,
         updateItemQuantity: handleUpdateCartItemQuantity,
     };
+    
 
     return (
         <CartContext.Provider value={ctxValue}>
