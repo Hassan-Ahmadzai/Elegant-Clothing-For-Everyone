@@ -8,18 +8,27 @@ import CartContextProvider from "./store/shopping-cart-context";
 
 
 function App() {
+    // let count = 0;
+    const [count, setCount] = useState(0);
+
+    console.log(useState(0));
+
+    const increase = () => {
+        // count++;
+        setCount(count + 1);
+        console.log("count: ", count);
+    }
+
     return (
-        <CartContextProvider>
-            <Header />
-            <Shop>
-                {DUMMY_PRODUCTS.map((product) => (
-                    <li key={product.id}>
-                        <Product {...product} />
-                    </li>
-                ))}
-            </Shop>
-        </CartContextProvider>
+        <div>
+            <div>{count}</div>
+
+            <div>
+                <button onClick={increase}>Increase</button>
+            </div>
+        </div>
     );
-}
+};
 
 export default App;
+ 
