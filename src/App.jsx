@@ -9,7 +9,7 @@ import CartContextProvider from "./store/shopping-cart-context";
 
 function App() {
     // let count = 0;
-    const [count, setCount] = useState(0);
+    // const [count, setCount] = useState(0);
 
     console.log(useState(0));
 
