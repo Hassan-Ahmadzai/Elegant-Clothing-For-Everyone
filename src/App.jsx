@@ -19,18 +19,27 @@ function App() {
         setUsers(data);
     };
 
+    const update = () => {
+        setIsUpdated(true);    
+    };
+
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [isUpdated]);
 
     return (
         <div>
             <div>Users</div>
+
             {users?.map((user) => (
                 <div key={user.id}>
                     {user.name}
                 </div>
             ))}
+
+            <div>
+                <button onClick={update}>Refresh</button>
+            </div>
         </div>
     );
 };
