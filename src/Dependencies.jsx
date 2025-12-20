@@ -10,11 +10,21 @@ function Basic() {
         let tempChar = [...prevChar];
         tempChar.push(currChar);
         setPrevChar([...tempChar]);
-    }, currChar);
+    }, [currChar]);
 
     return (
         <div>
-            {/* <div>{name}</div> */}
+            <input 
+                type="text" 
+                value={currChar}
+                onChange={(e) => setCurrChar(e.target.value)}
+            />
+            
+            <div>
+                {prevChar.map((char, index) => (
+                    <div key={index}>{char}</div>
+                ))}
+            </div>
         </div>
     );
 };
