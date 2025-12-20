@@ -1,33 +1,39 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 
 function Basic() {
-    const [currChar, setCurrChar] = useState("A");
-    // const [prevChar, setPrevChar] = useState([]);
+    // const [name, setName] = useState("");
 
-    const prevChar = useRef([]);
+    const unameRef = useRef("");
+    const pwordRef = useRef("");
 
-    useEffect(() => {
-        console.log('Re-render is happened');
-        // let tempChar = [...prevChar];
-        // tempChar.push(currChar);
-        // setPrevChar([...tempChar]);
-        prevChar.current.push(currChar);
-    }, [currChar]);
+    // const inputChange = (e) => {
+    //     setName(e.target.value);
+    // };
+
+    const login = () => {
+        console.log(unameRef.current.value);
+        console.log(pwordRef.current.value);
+    };
 
     return (
         <div>
-            <input 
-                type="text" 
-                value={currChar}
-                onChange={(e) => setCurrChar(e.target.value)}
-            />
-            
             <div>
-                {prevChar.current.map((char, index) => (
-                    <div key={index}>{char}</div>
-                ))}
+                <label>Username</label>
+                {/* <input type="text" onChange={inputChange} /> */}
+                <input type="text" ref={unameRef} />
             </div>
+
+            <div>
+                <label>Password</label>
+                <input type="password" ref={pwordRef} />
+            </div>
+
+            <div>
+                <button onClick={login}>Login</button>
+            </div>
+
+            {/* <div>{name}</div> */}
         </div>
     );
 };
