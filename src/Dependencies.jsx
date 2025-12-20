@@ -2,14 +2,14 @@ import React, { useRef, useState } from "react";
 
 
 function Basic() {
-    // const [name, setName] = useState("");
+    const [name, setName] = useState("");
 
     const unameRef = useRef("");
     const pwordRef = useRef("");
 
-    // const inputChange = (e) => {
-    //     setName(e.target.value);
-    // };
+    const inputChange = (e) => {
+        setName(e.target.value);
+    };
 
     const login = () => {
         console.log(unameRef.current.value);
