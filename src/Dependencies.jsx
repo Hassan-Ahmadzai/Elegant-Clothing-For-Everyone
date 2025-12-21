@@ -12,8 +12,8 @@ function Basic() {
     };
 
     const login = () => {
-        // console.log(unameRef.current.value);
-        // console.log(pwordRef.current.value);
+        console.log(unameRef.current.value);
+        console.log(pwordRef.current.value);
     };
 
     return (
