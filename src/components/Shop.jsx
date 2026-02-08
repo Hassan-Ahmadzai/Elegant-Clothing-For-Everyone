@@ -1,6 +1,6 @@
+
 import { DUMMY_PRODUCTS } from "../dummy-products";
 import Product from "./Product";
-
 
 
 export default function Shop({ onAddItemToCart }) {

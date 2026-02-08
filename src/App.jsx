@@ -10,7 +10,7 @@ function App() {
         items: [],
     });
 
-    function handleAddItemToCart(id) {
+    function handleAddItemToCart(id) { 
         setShoppingCart((prevShoppingCart) => {
             const updatedItems = [...prevShoppingCart.items];
 
