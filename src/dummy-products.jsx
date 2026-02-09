@@ -4,7 +4,7 @@ import rainJacket from "./assets/rain-jacket.jpg";
 import merlotSuit from "./assets/merlot-suit.jpg";
 import moonlightDress from "./assets/moonlight-dress.jpg";
 import denimPioneer from "./assets/denim-pioneer.jpg";
- 
+  
 
 export const DUMMY_PRODUCTS = [
     {
