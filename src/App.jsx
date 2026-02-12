@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 
 import Header from "./components/Header";
@@ -12,7 +13,7 @@ function App() {
         items: [],
     });
 
-    function handleAddItemToCart(id) { 
+    function handleAddItemToCart(id) {  
         setShoppingCart((prevShoppingCart) => {
             const updatedItems = [...prevShoppingCart.items];
 
@@ -69,6 +70,7 @@ function App() {
     const ctxValue = {
         items: shoppingCart.items,
         addItemToCart: handleAddItemToCart,
+        updateItemQuantity: handleUpdateCartItemQuantity,
     };
 
     return (
