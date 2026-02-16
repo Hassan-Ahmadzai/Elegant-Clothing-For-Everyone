@@ -70,10 +70,6 @@ export default function CartContextProvider({ children }) {
         },
     );
 
-    const [shoppingCart, setShoppingCart] = useState({
-        items: [],
-    });
-
     function handleAddItemToCart(id) {  
         shoppingCartDispatch({
             type: 'ADD_ITEM',
