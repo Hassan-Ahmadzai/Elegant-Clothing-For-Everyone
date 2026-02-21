@@ -1,5 +1,5 @@
 
-import imgSrc from '../assets/react-core-concepts.png';
+import imgSrc from "../../assets/react-core-concepts.png";
 
 const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
 
