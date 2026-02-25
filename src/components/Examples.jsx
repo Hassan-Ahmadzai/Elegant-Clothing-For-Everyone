@@ -3,9 +3,9 @@ import { useState } from "react";
 import { EXAMPLES } from "../data";
 import TabButton from "./TabButton";
 import Section from "./Section";
+import Tabs from "./Tabs";
 
 export default function Examples() {
-
     const [selectedTopic, setSelectedTopic] = useState();
 
     function handleSelect(selectedButton) {
@@ -29,6 +29,10 @@ export default function Examples() {
 
     return (
         <Section title="Examples" id="examples">
+            <Tabs>
+                {tabContent}
+            </Tabs>
+
             <menu>
                 <TabButton 
                     isSelected={selectedTopic === 'components'}
