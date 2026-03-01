@@ -1,4 +1,6 @@
 
+import { useState } from "react";
+
 const initialGameBoard = [
     [null, null, null],
     [null, null, null],
@@ -6,6 +8,13 @@ const initialGameBoard = [
 ];
 
 export default function GameBoard() {
+    const [gameBoard, setGameBoard] = useState(initialGameBoard);
+
+    function handleSelectSquare() {
+        setGameBoard((prevGameBoard) => {
+            
+        });
+    };
 
     return (
         <ol id="game-board">
