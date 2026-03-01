@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 const initialGameBoard = [
     [null, null, null],
@@ -11,7 +10,9 @@ export default function GameBoard() {
 
     function handleSelectSquare() {
         setGameBoard((prevGameBoard) => {
-            
+            const updatedBoard = [...prevGameBoard];
+            prevGameBoard[rowIndex][colIndex] = "X";
+            return prevGameBoard;
         });
     };
 
