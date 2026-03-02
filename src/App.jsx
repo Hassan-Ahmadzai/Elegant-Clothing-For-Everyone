@@ -2,9 +2,16 @@
 
 import Player from './components/Player';
 import GameBoard from './components/GameBoard';
+import { useState } from 'react';
 
 
 function App() {
+    const [activePlayer, setActivePlayer] = useState('X');
+
+    function handleSelectSquare() {
+        setActivePlayer((curActivePlayer) => curActivePlayer === 'X' ? 'O' : 'X');
+    };
+
     return (
         <main>
             <div id="game-container">
@@ -13,7 +20,9 @@ function App() {
                     <Player initialName="Player 2" symbol="0" />
                 </ol>
 
-                <GameBoard />
+                <GameBoard 
+                    
+                />
             </div>
 
             LOG
