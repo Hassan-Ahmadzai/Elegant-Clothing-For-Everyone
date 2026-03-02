@@ -21,7 +21,6 @@ function App() {
                 </ol>
 
                 <GameBoard 
-                    
                 />
             </div>
 
