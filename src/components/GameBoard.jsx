@@ -25,10 +25,10 @@ export default function GameBoard({ onSelectSquare, activePlayerSymbol }) {
             {gameBoard.map((row, rowIndex) => (
                 <li key={rowIndex}>
                     <ol>
-                        {row.map((col, colIndex) => (
+                        {row.map((playerSymbol, colIndex) => (
                             <li key={colIndex}>
                                 <button onClick={() => handleSelectSquare(rowIndex, colIndex)}>
-                                    {col}
+                                    {playerSymbol}
                                 </button>
                             </li>
                         ))}
