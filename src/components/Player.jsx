@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-
+    
 
 export default function Player({ initalName, symbol, isActive }) {
     const [playerName, setPlayerName] = useState(initalName);
