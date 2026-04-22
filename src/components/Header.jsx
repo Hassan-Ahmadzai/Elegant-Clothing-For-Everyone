@@ -2,10 +2,11 @@
 import React from "react";
 
 
-export default function Header() {
+export default function Header({ cart, onUpdateCartItemQuantity }) {
+
     return (
         <>
-            <header>
+            <header id="main-header">
                 <div id="main-title">
                     <img src="logo.png" alt="Elegant model" />
                     <h1>Elegant Context</h1>
