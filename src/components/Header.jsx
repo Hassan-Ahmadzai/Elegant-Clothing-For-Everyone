@@ -1,9 +1,11 @@
 
+import React from "react";
+
 
 export default function Header() {
     return (
         <>
-            <header id="main-header">
+            <header>
                 <div id="main-title">
                     <img src="logo.png" alt="Elegant model" />
                     <h1>Elegant Context</h1>
@@ -11,7 +13,7 @@ export default function Header() {
 
                 <p>
                     <button>
-                        Cart ({cartQuantity})
+                        Cart ({})
                     </button>
                 </p>
             </header>

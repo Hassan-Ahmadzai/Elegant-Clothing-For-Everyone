@@ -1,6 +1,5 @@
 
 import React, { useState } from "react";
-import Header from "./components/Header/Header";
 
 
 function App() {
@@ -9,9 +8,11 @@ function App() {
     });
 
     return (
-        <div>
-            <Header />
-        </div>
+        <>
+            <Header 
+                cart={shoppingCart}
+            />
+        </>
     );
 };
 
