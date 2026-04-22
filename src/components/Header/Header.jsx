@@ -1,27 +1,21 @@
 
-import imgSrc from "../../assets/react-core-concepts.png";
 
-const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * (max + 1));
-};
 
 export default function Header() {
-    const description = reactDescriptions[getRandomInt(2)];
-
     return (
-        <div>
-            <header>
-                <img src={imgSrc} alt="Stylized atom" />
-
-                <h1>React Essentials</h1>
+        <>
+            <header id="main-header">
+                <div id="main-title">
+                    <img src="logo.png" alt="Elegant model" />
+                    <h1>Elegant Context</h1>
+                </div>
 
                 <p>
-                    {description} React concepts you will need for almost any app you are
-                    going to build!
+                    <button>
+                        Cart ({cartQuantity})
+                    </button>
                 </p>
             </header>
-        </div>
+        </>
     );
 };
