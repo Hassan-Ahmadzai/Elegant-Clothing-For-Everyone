@@ -17,7 +17,6 @@ function App() {
             const existingCartItemIndex = updatedItems.findIndex(
                 (cartItem) => cartItem.id === id
             );
-            console.log(existingCartItemIndex);
 
             const existingCartItem = updatedItems[existingCartItemIndex];
 
