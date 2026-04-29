@@ -1,5 +1,6 @@
 
 import React, { useRef } from "react";
+import CartModal from "./CartModal";
 
 
 export default function Header({ cart, onUpdateCartItemQuantity }) {
@@ -24,7 +25,13 @@ export default function Header({ cart, onUpdateCartItemQuantity }) {
 
     return (
         <>
-            <CartModal />
+            <CartModal
+                ref={modal}
+                cartItems={cart.items}
+                onUpdateCartItemQuantity={onUpdateCartItemQuantity}
+                title="Your Cart"
+                actions={modalActions}
+            />
 
             <header id="main-header">
                 <div id="main-title">
@@ -33,8 +40,8 @@ export default function Header({ cart, onUpdateCartItemQuantity }) {
                 </div>
 
                 <p>
-                    <button>
-                        Cart ({})
+                    <button onClick={handleOpenCartClick}>
+                        Cart ({cartQuantity})
                     </button>
                 </p>
             </header>

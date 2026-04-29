@@ -42,11 +42,15 @@ function App() {
         });
     };
 
+    function handleUpdateCartItemQuantity(productId, amount) {
+        
+    }
+
     return (
         <>
             <Header
                 cart={shoppingCart}
-                // onUpdateCartItemQuantity={}
+                onUpdateCartItemQuantity={handleUpdateCartItemQuantity}
             />
 
             <Shop onAddItemToCart={handleAddItemToCart} />
