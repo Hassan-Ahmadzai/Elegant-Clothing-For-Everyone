@@ -22,7 +22,7 @@ export default function Header({ cart, onUpdateCartItemQuantity }) {
             </>
         );
     };
-
+    
     return (
         <>
             <CartModal
