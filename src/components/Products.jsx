@@ -11,7 +11,7 @@ export default function Product({
     description,
     onAddToCart,
 }) {
-    const cartCtx = useContext(CartContext);                    
+    const cartCtx = useContext(CartContext);                        
 
     return (
         <article className="product">
