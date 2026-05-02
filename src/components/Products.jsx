@@ -1,5 +1,7 @@
 
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../store/shopping-cart";
+
 
 export default function Product({
     id,
@@ -9,6 +11,8 @@ export default function Product({
     description,
     onAddToCart,
 }) {
+    const cartCtx = useContext(CartContext);                    
+
     return (
         <article className="product">
             <img src={image} alt={title} />
