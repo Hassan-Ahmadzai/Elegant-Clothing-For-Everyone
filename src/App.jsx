@@ -70,14 +70,14 @@ function App() {
     
 
     return (
-        <>
+        <CartContext.Provider>
             <Header
                 cart={shoppingCart}
                 onUpdateCartItemQuantity={handleUpdateCartItemQuantity}
             />
 
             <Shop onAddItemToCart={handleAddItemToCart} />
-        </>
+        </CartContext.Provider>
     );
 };
 
